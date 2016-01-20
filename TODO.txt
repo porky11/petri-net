@@ -1,0 +1,3 @@
+optimize petri-nets
+make petri-net-dot.lisp better (currently not able to display multiple tokens per place)
+add petri-net-dot.asd
