@@ -88,8 +88,8 @@ optional you can set <errorp> to nil and define an <error-value>"
       (transition-fire (or (assoc (funcall function (mapcar #'transition-identifier transition-list))
                                   transition-list :test #'eq)
                            (if errorp
-                               (error (or error-value "Chosen transition cannot fire")
-                                      (return-from petri-net-step error-value))))
+                               (error (or error-value "Chosen transition cannot fire"))
+                               (return-from petri-net-step error-value)))
                        petri-net))))
 
 
