@@ -1,6 +1,7 @@
 (defpackage #:petri-net
   (:use #:cl #:alexandria)
   (:export
+
    ;;transition
    #:transition
    #:make-transition
@@ -8,6 +9,7 @@
    #:transition-identifier
    #:transition-input-places
    #:transition-output-places
+
    ;;petri-net
    #:petri-net
    #:make-petri-net
@@ -15,17 +17,18 @@
    #:petri-net-transitions
    #:petri-net-place-tokens
    #:petri-net-execution-policy
+
    ;;execute
    #:transition-enabled-p
    #:enabled-transitions
    #:transition-fire
    #:petri-net-step
+
    ;;dynamic
    #:petri-net-create-place-token
    #:petri-net-consume-place-token
    ))
 (in-package #:petri-net)
-
 
 
 (defstruct (transition (:type list))
@@ -36,7 +39,7 @@
 
 (defun random-element (list)
   (nth (random (length list)) list))
-    
+
 (defstruct (petri-net (:type list))
   place-tokens
   transitions
